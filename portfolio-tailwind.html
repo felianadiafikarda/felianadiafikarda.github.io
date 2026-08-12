@@ -1,0 +1,2964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Felia Nadia Fikarda — Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+
+          colors: {
+            ink: '#161A2B',
+            muted: '#5B6178',
+            faint: '#9298AC',
+            primary: '#4A5FE8',
+            accent: '#F2994A',
+            soft: '#F2F4F9'
+          },
+
+          boxShadow: {
+            card: '0 20px 50px -28px rgba(22,26,43,.22)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* =========================================================
+       IMAGE LIGHTBOX
+    ========================================================== */
+
+    .zoomable-image {
+      cursor: zoom-in;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .zoomable-image:hover {
+      opacity: 0.92;
+    }
+
+    #imageLightbox {
+      display: none;
+    }
+
+    #imageLightbox.active {
+      display: flex;
+    }
+
+    #lightboxImage {
+      max-width: 92vw;
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      cursor: zoom-out;
+      animation: lightboxZoom 0.2s ease-out;
+    }
+
+    @keyframes lightboxZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+
+
+<body
+  class="bg-[#FBFBFD] text-ink font-body antialiased transition-colors duration-300 dark:bg-[#0E1120] dark:text-[#EEF0F8]"
+>
+
+  <header
+    class="sticky top-0 z-50 border-b border-[#E6E9F1]/80 bg-[#FBFBFD]/85 backdrop-blur-xl dark:border-white/10 dark:bg-[#0E1120]/85"
+  >
+
+    <div
+      class="mx-auto flex max-w-[1160px] items-center justify-between gap-5 px-5 py-4 sm:px-8"
+    >
+
+      <!-- Logo -->
+      <a
+        href="#top"
+        class="flex items-center gap-2 font-display text-lg font-extrabold"
+      >
+        <span class="h-2 w-2 rounded-full bg-primary"></span>
+        Felia Nadia Fikarda
+      </a>
+
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:block">
+
+        <ul id="navLinks" class="flex list-none gap-8">
+
+          <li>
+            <a
+              href="#home"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#profil"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#pengalaman"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              Experience
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#proyek"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#skill"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              Skills
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#kontak"
+              class="nav-link relative py-1 text-sm font-medium text-[#5B6178] transition hover:text-ink dark:text-[#A2A8C0] dark:hover:text-white"
+            >
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!-- Navigation Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+
+        <!-- Dark Mode -->
+        <button
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle light/dark mode"
+          class="flex h-7 w-12 items-center rounded-full border border-[#E6E9F1] bg-white p-1 dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+          <span
+            id="themeKnob"
+            class="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-[11px] text-white transition-transform duration-200"
+          >
+            ☾
+          </span>
+
+        </button>
+
+        <!-- Contact -->
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=felianadiafikarda@gmail.com"
+          target="_blank"
+          rel="noopener"
+          class="hidden rounded-full bg-primary px-5 py-2.5 text-[13px] font-semibold text-white transition hover:-translate-y-0.5 sm:inline-flex"
+        >
+          Contact Me
+        </a>
+
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="burger"
+          type="button"
+          aria-label="Open menu"
+          class="flex rounded-lg border border-[#E6E9F1] p-2 dark:border-white/10 lg:hidden"
+        >
+
+          <span class="block h-0.5 w-5 bg-ink dark:bg-white"></span>
+
+          <span
+            class="ml-[-20px] mt-1.5 block h-0.5 w-5 bg-ink dark:bg-white"
+          ></span>
+
+          <span
+            class="ml-[-20px] mt-3 block h-0.5 w-5 bg-ink dark:bg-white"
+          ></span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobileMenu"
+      class="hidden border-t border-[#E6E9F1] px-5 pb-4 pt-2 dark:border-white/10 lg:hidden"
+    >
+
+      <a
+      href="#home"
+      class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+      Home
+      </a>
+    
+      <a
+        href="#profil"
+        class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+        About
+      </a>
+
+      <a
+        href="#pengalaman"
+        class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+        Experience
+      </a>
+
+      <a
+        href="#proyek"
+        class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+        Projects
+      </a>
+
+      <a
+        href="#skill"
+        class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+        Skills
+      </a>
+
+      <a
+        href="#kontak"
+        class="block border-b border-[#E6E9F1] py-3 dark:border-white/10"
+      >
+        Contact
+      </a>
+
+      <a
+        href="CV_FELIA_NADIA_FIKARDA.pdf"
+        download
+        class="block py-3 font-semibold text-primary"
+      >
+        ⬇ Download CV
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <div id="top"></div>
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <section
+    id="home"
+    class="relative overflow-hidden py-12 sm:py-16 lg:py-[72px]"
+  >
+
+    <!-- Background Decoration -->
+    <div
+      class="pointer-events-none absolute inset-x-[-10%] top-[-15%] -z-10 h-[640px] bg-[radial-gradient(460px_340px_at_15%_20%,#EBEEFD,transparent_70%),radial-gradient(420px_320px_at_88%_10%,#FDF1E4,transparent_70%)] blur-md dark:bg-[radial-gradient(460px_340px_at_15%_20%,rgba(124,140,245,.14),transparent_70%),radial-gradient(420px_320px_at_88%_10%,rgba(245,169,97,.14),transparent_70%)]"
+    ></div>
+
+
+    <div
+      class="mx-auto grid max-w-[1160px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-14"
+    >
+
+      <!-- Hero Text -->
+      <div>
+
+        <p
+          class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+        >
+          Personal Portfolio
+        </p>
+
+
+        <h1
+          class="font-display text-[34px] font-extrabold leading-tight sm:text-[46px]"
+        >
+          Hi, I'm<br>
+          <span class="text-primary">
+            Felia Nadia Fikarda
+          </span>
+        </h1>
+
+
+        <p
+          class="mt-4 flex flex-wrap items-center gap-2.5 text-base font-semibold text-[#5B6178] dark:text-[#A2A8C0]"
+        >
+
+
+          Data Analyst · Front-End Developer · Back-End Developer
+
+          <span
+            class="rounded-full bg-[#E4F7F0] px-3 py-1 text-xs font-bold text-[#12A177] dark:bg-[#3FD9A4]/10 dark:text-[#3FD9A4]"
+          >
+            Open to entry-level opportunities
+          </span>
+
+        </p>
+
+
+        <p
+          class="mt-4 max-w-2xl text-base leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+        >
+          Informatics graduate from Universitas Ahmad Dahlan with hands-on
+          experience in Python, SQL, MySQL, Excel, data cleaning,
+          preprocessing, data visualization, and database management.
+          I am passionate about turning data into meaningful insights while
+          also building responsive and functional web applications using
+          modern web technologies.
+        </p>
+
+
+        <!-- Hero Buttons -->
+        <div class="mt-7 mb-8 flex flex-wrap gap-3">
+
+          <a
+            href="mailto:felianadiafikarda@gmail.com"
+            class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5"
+          >
+            Get in Touch →
+          </a>
+
+          <a
+            href="CV_FELIA_NADIA_FIKARDA.pdf"
+            download
+            class="inline-flex items-center gap-2 rounded-full border border-[#E6E9F1] px-6 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-white/10"
+          >
+            ⬇ Download CV
+          </a>
+
+          <a
+            href="https://github.com/felianadiafikarda"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full border border-[#E6E9F1] px-6 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-white/10"
+          >
+            View GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/felia-nadia-fikarda"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full border border-[#E6E9F1] px-6 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-white/10"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div
+          class="flex flex-wrap border-t border-[#E6E9F1] pt-5 dark:border-white/10"
+        >
+
+          <div
+            class="mr-6 border-r border-[#E6E9F1] pr-6 dark:border-white/10"
+          >
+            <b class="block font-display text-2xl font-extrabold">
+              3.94
+            </b>
+
+            <span class="text-xs text-[#9298AC]">
+              GPA out of 4.00
+            </span>
+          </div>
+
+          <div>
+            <b class="block font-display text-2xl font-extrabold">
+              100+
+            </b>
+
+            <span class="text-xs text-[#9298AC]">
+              Students Mentored
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Hero Photo -->
+      <div
+        class="relative mx-auto flex max-w-xs justify-center lg:max-w-none"
+      >
+
+        <div
+          class="relative z-10 w-full overflow-hidden rounded-[22px] border border-[#E6E9F1] shadow-card dark:border-white/10"
+        >
+
+          <img
+            src="profile.png"
+            alt="Photo of Felia Nadia Fikarda"
+            class="aspect-[3/3.6] w-full object-cover"
+          >
+
+        </div>
+
+
+        <div
+          class="absolute left-[-6%] top-[6%] z-20 hidden items-center gap-2 rounded-xl border border-[#E6E9F1] bg-white/90 px-4 py-2.5 text-xs font-semibold shadow-card backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90 sm:flex"
+        >
+          <span class="h-2 w-2 rounded-full bg-[#12A177]"></span>
+          Yogyakarta, ID
+        </div>
+
+
+        <div
+          class="absolute bottom-[8%] right-[-8%] z-20 hidden items-center gap-2 rounded-xl border border-[#E6E9F1] bg-white/90 px-4 py-2.5 text-xs font-semibold shadow-card backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90 sm:flex"
+        >
+          <span class="h-2 w-2 rounded-full bg-[#12A177]"></span>
+          Python · SQL · Laravel · PHP · Tailwind
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<section
+id="profil"
+class="relative overflow-hidden py-12 sm:py-16 lg:py-[72px]"
+>
+  <div class="mx-auto max-w-[1160px] px-5 sm:px-8">
+
+    <!-- Section Heading -->
+    <p
+      class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+    >
+      About Me
+    </p>
+  
+    <h2
+      class="reveal font-display text-2xl font-extrabold sm:text-[30px]"
+    >
+      Profile & Background
+    </h2>
+  
+    <p
+      class="reveal mb-9 mt-2 max-w-2xl text-sm leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+    >
+      
+    </p>
+  
+  
+    <!-- About Text -->
+    <div class="reveal max-w-4xl">
+  
+      <p
+        class="mb-3.5 text-[15px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        I'm an
+        <b class="text-ink dark:text-white">
+          Informatics graduate from Universitas Ahmad Dahlan
+        </b>
+        with an interest in data analysis and web development.
+        I have hands-on experience working with Python, SQL, MySQL,
+        Excel, data cleaning, preprocessing, visualization, and
+        database management through academic projects, internships,
+        and practical experiences.
+      </p>
+  
+      <p
+        class="mb-3.5 text-[15px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        Alongside data-related work, I have experience developing
+        responsive web interfaces and functional back-end systems
+        using Laravel, PHP, JavaScript, Next.js, and database
+        technologies. I enjoy analyzing problems, transforming data
+        into useful information, and building practical digital solutions.
+      </p>  
+    </div>
+  
+  
+    <!-- ========================================== -->
+    <!-- PROFILE CARDS -->
+    <!-- ========================================== -->
+  
+    <div
+      class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
+  
+      <!-- Education -->
+      <div
+      class="reveal min-h-[260px] rounded-2xl border border-[#E6E9F1] bg-white p-6 transition duration-300 hover:border-primary hover:bg-[#F8F9FC] dark:border-white/20 dark:bg-transparent dark:hover:border-white/40 dark:hover:bg-white/[0.02]"
+      >
+
+      <!-- Icon -->
+      <div class="mb-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10 text-primary dark:text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 20.25h3m-6.75-3.75h10.5M4.5 9.75h15M6.75 3.75h10.5A2.25 2.25 0 0119.5 6v12a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 18V6a2.25 2.25 0 012.25-2.25z"
+          />
+        </svg>
+      </div>
+
+      <h3 class="mb-5 text-xl font-bold text-[#171B2C] dark:text-white">
+        Education
+      </h3>
+
+      <p class="text-base leading-6 text-[#5B6178] dark:text-[#D8D3E8]">
+        Bachelor of Informatics,
+        <br />
+        Universitas Ahmad
+        <br />
+        Dahlan
+      </p>
+
+      </div>
+
+
+      <!-- Focus -->
+      <div
+      class="reveal min-h-[260px] rounded-2xl border border-[#E6E9F1] bg-white p-6 transition duration-300 hover:border-primary hover:bg-[#F8F9FC] dark:border-white/20 dark:bg-transparent dark:hover:border-white/40 dark:hover:bg-white/[0.02]"
+      >
+
+      <!-- Icon -->
+      <div class="mb-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10 text-primary dark:text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"
+          />
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7.5 9.75v4.5c0 1.5 2.01 3.75 4.5 3.75s4.5-2.25 4.5-3.75v-4.5"
+          />
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 7.5v6"
+          />
+        </svg>
+      </div>
+
+      <h3 class="mb-5 text-xl font-bold text-[#171B2C] dark:text-white">
+        Focus
+      </h3>
+
+      <p class="text-base leading-6 text-[#5B6178] dark:text-[#D8D3E8]">
+        Data analysis, Front-End and
+        <br />
+        Back-End Developer
+      </p>
+
+      </div>
+
+
+      <!-- Strengths -->
+      <div
+      class="reveal min-h-[260px] rounded-2xl border border-[#E6E9F1] bg-white p-6 transition duration-300 hover:border-primary hover:bg-[#F8F9FC] dark:border-white/20 dark:bg-transparent dark:hover:border-white/40 dark:hover:bg-white/[0.02]"
+      >
+
+      <!-- Icon -->
+      <div class="mb-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10 text-primary dark:text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 6.75V5.25A1.5 1.5 0 0110.5 3.75h3A1.5 1.5 0 0115 5.25v1.5"
+          />
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 8.25h15A1.5 1.5 0 0121 9.75v8.25a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 18V9.75a1.5 1.5 0 011.5-1.5z"
+          />
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 12h18"
+          />
+        </svg>
+      </div>
+
+      <h3 class="mb-5 text-xl font-bold text-[#171B2C] dark:text-white">
+        Strengths
+      </h3>
+
+      <p class="text-base leading-6 text-[#5B6178] dark:text-[#D8D3E8]">
+        Analytical thinking,
+        <br />
+        problem solving,
+        <br />
+        attention to detail
+      </p>
+
+      </div>
+  
+    </div>
+  
+  
+  </div>
+
+  </div>
+</section>
+
+  <!-- =========================================================
+       EXPERIENCE
+  ========================================================== -->
+
+  <section id="pengalaman" class="py-14 sm:py-[72px]">
+
+    <div class="mx-auto max-w-[1160px] px-5 sm:px-8">
+
+      <p
+        class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+      >
+        Track Record
+      </p>
+
+      <h2
+        class="reveal font-display text-2xl font-extrabold sm:text-[30px]"
+      >
+        Experience
+      </h2>
+
+      <p
+        class="reveal mb-9 mt-2 max-w-2xl text-sm leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        My experience in data, web development, internships, and academic
+        mentoring. Add screenshots, certificates, or activity photos to
+        showcase project evidence.
+      </p>
+
+
+      <!-- Experience Filter -->
+      <div class="reveal mb-7 flex flex-wrap gap-2.5">
+
+        <button
+          class="filter-btn rounded-full border border-primary bg-primary px-5 py-2 text-[13px] font-semibold text-white"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn rounded-full border border-[#E6E9F1] bg-white px-5 py-2 text-[13px] font-semibold text-[#5B6178] dark:border-white/10 dark:bg-[#171B2C] dark:text-[#A2A8C0]"
+          data-filter="internship"
+        >
+          Internship
+        </button>
+
+        <button
+          class="filter-btn rounded-full border border-[#E6E9F1] bg-white px-5 py-2 text-[13px] font-semibold text-[#5B6178] dark:border-white/10 dark:bg-[#171B2C] dark:text-[#A2A8C0]"
+          data-filter="lab"
+        >
+          Lab Assistant
+        </button>
+
+      </div>
+
+
+      <!-- Experience Grid -->
+      <div
+      id="expGrid"
+      class="mx-auto flex max-w-[1100px] gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
+
+        <!-- =====================================================
+             EXPERIENCE 1
+        ====================================================== -->
+
+        <article
+          class="exp-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white transition hover:-translate-y-1 hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+          data-category="internship"
+        >
+
+          <!-- Photo Area -->
+          <div
+            class="relative aspect-[16/10] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <span
+              class="absolute left-3 top-3 z-30 rounded-full border border-[#E6E9F1] bg-white/90 px-3 py-1.5 text-[11px] font-bold backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90"
+            >
+              Internship
+            </span>
+
+            <span
+              class="absolute right-3 top-3 z-30 rounded-full border border-[#E6E9F1] bg-white/90 px-3 py-1.5 text-[11px] text-[#5B6178] backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90 dark:text-[#A2A8C0]"
+            >
+              Aug – Dec 2025
+            </span>
+
+
+            <div
+              class="carousel group h-full"
+              data-carousel
+            >
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/meeting-with-internship-supervisor.jpeg"
+                    alt="Meeting with Internship Supervisor"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/list-paper-for-author-section.png"
+                    alt="Journal Submission System — Author Paper List"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/form-send-paper.png"
+                    alt="Journal Submission System — Send Paper Form"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/form-article-revision.png"
+                    alt="Journal Submission System — Article Revision Form"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/list-paper-for-editor-section.png.png"
+                    alt="Journal Submission System — Editor Paper List"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/assign-reviewer-section-editor.png"
+                    alt="Journal Submission System — Assign Reviewer"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+              </div>
+
+
+              <!-- Previous -->
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/30 text-xl text-white backdrop-blur transition hover:bg-primary"
+              >
+                ‹
+              </button>
+
+
+              <!-- Next -->
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/30 text-xl text-white backdrop-blur transition hover:bg-primary"
+              >
+                ›
+              </button>
+
+
+              <!-- Counter -->
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 6
+              </span>
+
+              1 / 3
+              <!-- Dots -->
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Content -->
+          <div class="flex flex-1 flex-col p-4">
+
+            <h3 class="font-display text-[15px] font-bold">
+              Back-End Developer — Journal Submission System
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              ASCEE — Association for Scientific Computing, Electronics, and Engineering
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Developed back-end functionality for an online journal
+              submission platform, including Author and Editor modules,
+              while managing the database to support journal data processing
+              and workflow.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+
+              <span class="tag-chip">Laravel</span>
+              <span class="tag-chip">PHP</span>
+              <span class="tag-chip">MySQL</span>
+              <span class="tag-chip">JavaScript</span>
+
+            </div>
+            <div class="mt-3">
+              <a
+                href="https://github.com/felianadiafikarda/projekmagang2?tab=readme-ov-file"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center rounded-full border border-[#E6E9F1] px-4 py-2 text-xs font-semibold transition hover:border-primary hover:text-primary dark:border-white/10"
+              >
+                See Project ↗
+              </a>
+            </div>
+          </div>
+          
+        </article>
+
+
+        <!-- =====================================================
+             EXPERIENCE 2
+        ====================================================== -->
+
+        <article
+          class="exp-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white transition hover:-translate-y-1 hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+          data-category="internship"
+        >
+
+          <div
+            class="relative aspect-[16/10] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <span
+              class="absolute left-3 top-3 z-30 rounded-full border border-[#E6E9F1] bg-white/90 px-3 py-1.5 text-[11px] font-bold backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90"
+            >
+              Internship
+            </span>
+
+            <span
+              class="absolute right-3 top-3 z-30 rounded-full border border-[#E6E9F1] bg-white/90 px-3 py-1.5 text-[11px] text-[#5B6178] backdrop-blur dark:border-white/10 dark:bg-[#171B2C]/90 dark:text-[#A2A8C0]"
+            >
+              Aug – Dec 2025
+            </span>
+
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/First-Meeting-with-Internship-Supervisor.jpeg"
+                    alt="First Meeting with Internship Supervisor"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+                
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/home-page.png"
+                    alt="Conference Website — Photo 1"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/contact-page.png"
+                    alt="Conference Website — Photo 2"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/home-admin.png"
+                    alt="Conference Website — Photo 3"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div
+                  class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="images/contact-admin.png"
+                    alt="Conference Website — Photo 4"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 5
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">
+
+            <h3 class="font-display text-[15px] font-bold">
+              Back-End Developer — Conference Website
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              ASCEE — Association for Scientific Computing, Electronics, and Engineering
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Developed back-end functionality for conference website pages
+              including Home, Call for Paper, and Contact, with database
+              integration to support the admin panel.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+
+              <span class="tag-chip">Laravel</span>
+              <span class="tag-chip">PHP</span>
+              <span class="tag-chip">MySQL</span>
+              <span class="tag-chip">JavaScript</span>
+
+            </div>
+            <div class="mt-3">
+              <a
+                href="https://events.ascee.org/"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center rounded-full border border-[#E6E9F1] px-4 py-2 text-xs font-semibold transition hover:border-primary hover:text-primary dark:border-white/10"
+              >
+                See Project ↗
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- =====================================================
+             EXPERIENCE 3
+        ====================================================== -->
+
+        <article
+          class="exp-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white transition hover:-translate-y-1 hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+          data-category="lab"
+        >
+
+          <div
+            class="relative aspect-[16/10] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <span
+              class="absolute left-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold dark:bg-[#171B2C]/90"
+            >
+              Lab Assistant
+            </span>
+
+            <span
+              class="absolute right-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] text-[#5B6178] dark:bg-[#171B2C]/90 dark:text-[#A2A8C0]"
+            >
+              Apr – Aug 2025
+            </span>
+
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat SA-KCB.jpg"
+                    alt="AI Practicum — Photo 1"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat SA-KCB2.jpg"
+                    alt="AI Practicum — Photo 2"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 2
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">
+
+            <h3 class="font-display text-[15px] font-bold">
+              Artificial Intelligence Lab Assistant
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              Informatics Lab, Universitas Ahmad Dahlan
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Guided 25 students through Python-based Artificial Intelligence
+              practicums, covering search algorithms such as DFS and BFS,
+              while evaluating practical assignments.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+              <span class="tag-chip">Python</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =====================================================
+             EXPERIENCE 4
+        ====================================================== -->
+
+        <article
+          class="exp-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white transition hover:-translate-y-1 hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+          data-category="lab"
+        >
+
+          <div
+            class="relative aspect-[16/10] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <span
+              class="absolute left-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold dark:bg-[#171B2C]/90"
+            >
+              Lab Assistant
+            </span>
+
+            <span
+              class="absolute right-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] text-[#5B6178] dark:bg-[#171B2C]/90 dark:text-[#A2A8C0]"
+            >
+              Apr – Aug 2025
+            </span>
+
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat SA-KCB.jpg"
+                    alt="Algorithm Strategy Practicum — Photo 1"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat SA-KCB2.jpg"
+                    alt="Algorithm Strategy Practicum — Photo 2"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 2
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">
+
+            <h3 class="font-display text-[15px] font-bold">
+              Algorithm Strategy Lab Assistant
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              Informatics Lab, Universitas Ahmad Dahlan
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Guided 35 students in learning algorithm strategies such as
+              Divide and Conquer, Brute Force, and Greedy using C++,
+              while conducting practical evaluations.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+              <span class="tag-chip">C++</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =====================================================
+             EXPERIENCE 5
+        ====================================================== -->
+
+        <article
+          class="exp-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white transition hover:-translate-y-1 hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+          data-category="lab"
+        >
+
+          <div
+            class="relative aspect-[16/10] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <span
+              class="absolute left-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold dark:bg-[#171B2C]/90"
+            >
+              Lab Assistant
+            </span>
+
+            <span
+              class="absolute right-3 top-3 z-30 rounded-full bg-white/90 px-3 py-1.5 text-[11px] text-[#5B6178] dark:bg-[#171B2C]/90 dark:text-[#A2A8C0]"
+            >
+              Sept 2024 – Jan 2025
+            </span>
+
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat-basdat.jpg"
+                    alt="Database Practicum — Photo 1"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Sertifikat-basdat2.jpg"
+                    alt="Database Practicum — Photo 2"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 2
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">
+
+            <h3 class="font-display text-[15px] font-bold">
+              Database Lab Assistant
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              Informatics Lab, Universitas Ahmad Dahlan
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Prepared practicum materials covering SQL, ERD,
+              normalization, and database management, while guiding
+              40 students through hands-on database sessions.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+
+              <span class="tag-chip">SQL</span>
+              <span class="tag-chip">ERD</span>
+              <span class="tag-chip">MySQL</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PROJECTS
+  ========================================================== -->
+
+  <section
+    id="proyek"
+    class="bg-[#F2F4F9] py-14 sm:py-[72px] dark:bg-[#141827]"
+  >
+
+    <div class="mx-auto max-w-[1160px] px-5 sm:px-8">
+
+      <p
+        class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+      >
+        Selected Work
+      </p>
+
+      <h2
+        class="reveal font-display text-2xl font-extrabold sm:text-[30px]"
+      >
+        Projects
+      </h2>
+
+      <p
+        class="reveal mb-9 mt-2 max-w-2xl text-sm leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        Selected projects demonstrating my experience in data,
+        web development, database management, and practical problem solving.
+      </p>
+
+
+      <div
+  class="mx-auto flex max-w-[1100px] gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+>
+        
+
+        <!-- =====================================================
+             PROJECT 1 — ABSA
+        ====================================================== -->
+        <article
+        class="project-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+        <div
+          class="relative aspect-[16/9] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+        >
+
+          <div class="carousel h-full" data-carousel>
+
+            <div
+              class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+
+              <!-- Main Result -->
+              <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                <img
+                  src="images/training-grafik.png"
+                  alt="Aspect-Based Sentiment Analysis — Main Result"
+                  class="max-h-full max-w-full object-contain"
+                >
+              </div>
+
+
+              <!-- Data Crawling -->
+              <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                <img
+                  src="images/data-crawling.png"
+                  alt="Aspect-Based Sentiment Analysis — Data Crawling"
+                  class="max-h-full max-w-full object-contain"
+                >
+              </div>
+
+
+              <!-- Data Preprocessing -->
+              <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                <img
+                  src="images/preprocessing.png"
+                  alt="Aspect-Based Sentiment Analysis — Data Preprocessing"
+                  class="max-h-full max-w-full object-contain"
+                >
+              </div>
+
+
+              <!-- Visualization -->
+              <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                <img
+                  src="images/confusion-matrix.png"
+                  alt="Aspect-Based Sentiment Analysis — Visualization"
+                  class="max-h-full max-w-full object-contain"
+                >
+              </div>
+
+              <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                <img
+                  src="images/Distribusi-smote.png"
+                  alt="Aspect-Based Sentiment Analysis — Visualization"
+                  class="max-h-full max-w-full object-contain"
+                >
+              </div>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+            >
+              ‹
+            </button>
+
+            <button
+              type="button"
+              class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+            >
+              ›
+            </button>
+
+            <span
+              class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+            >
+              1 / 4
+            </span>
+
+            <div
+              class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex flex-1 flex-col p-4">           
+
+          <h3 class="font-display text-[15px] font-bold">
+            Aspect-Based Sentiment Analysis on X Data
+          </h3>
+
+          <p class="mt-1 text-[11px] font-semibold text-primary">
+            Data Analyst · Data Analysis Project
+          </p>
+
+          <p
+            class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+          >
+            Conducted an
+            <b class="text-ink dark:text-white">
+              Aspect-Based Sentiment Analysis
+            </b>
+            project using data collected from X. The workflow covered
+            data crawling, data preprocessing, aspect-based sentiment
+            analysis, and data visualization to identify sentiment
+            patterns and insights.
+          </p>
+
+          <div class="mt-3 flex flex-wrap gap-1">
+
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">X Data</span>
+            <span class="tag-chip">Data Crawling</span>
+            <span class="tag-chip">Data Preprocessing</span>
+            <span class="tag-chip">ABSA</span>
+            <span class="tag-chip">Data Visualization</span>
+
+          </div>
+
+          <div class="mt-3">
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex rounded-full border border-[#E6E9F1] px-4 py-2 text-xs font-semibold hover:border-primary hover:text-primary dark:border-white/10"
+            >
+              See Project ↗
+            </a>
+
+          </div>
+
+        </div>
+
+        </article>
+
+        <!-- =====================================================
+             PROJECT 2 — KARANGTENGAH
+        ====================================================== -->
+
+        <article
+          class="project-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+          <div
+            class="relative aspect-[16/9] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/profile-page.png"
+                    alt="Profile Karangtengah"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/video-profile-page.png"
+                    alt="Video Profile Page"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/cultural-potential-page.png"
+                    alt="Cultural Potential Page"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/facilities-page.png"
+                    alt="Cultural Potential Page"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/Penyerahan-Web.jpeg"
+                    alt="Penyerahan Website"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 3
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">           
+
+            <h3 class="font-display text-[15px] font-bold leading-snug">
+              Village Information Management System — Karangtengah
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              Full Stack Developer · Karangtengah Village · KKN
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Developed a
+              <b class="text-ink dark:text-white">
+                web-based village information management system
+              </b>
+              during the KKN community service program.
+              The system supports village staff in managing information
+              and administrative data through a centralized digital platform.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+
+              <span class="tag-chip">Next.js</span>
+              <span class="tag-chip">PostgreSQL</span>
+              <span class="tag-chip">CSS</span>
+
+            </div>
+
+            <div class="mt-3">
+
+              <a
+                href="https://karangtengah-rho.vercel.app/user"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex rounded-full border border-[#E6E9F1] px-4 py-2 text-xs font-semibold hover:border-primary hover:text-primary dark:border-white/10"
+              >
+                See Project ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =====================================================
+             PROJECT 3 — CV KEMBAR JAYA
+        ====================================================== -->
+
+        <article
+          class="project-card reveal w-[320px] shrink-0 overflow-hidden rounded-2xl border border-[#E6E9F1] bg-white shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+          <div
+            class="relative aspect-[16/9] overflow-hidden border-b border-[#E6E9F1] bg-[#F2F4F9] dark:border-white/10 dark:bg-[#141827]"
+          >
+
+            <div class="carousel h-full" data-carousel>
+
+              <div
+                class="carousel-track flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/drilling-cv-kembar-jaya.png"
+                    alt="Management Information System CV Kembar Jaya — Photo 1"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/galeri-cv-kembar-jaya.png"
+                    alt="Management Information System CV Kembar Jaya — Photo 2"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/pemesanan-cv-kembar-jaya.png"
+                    alt="Management Information System CV Kembar Jaya — Photo 3"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+                <div class="carousel-slide flex h-full min-w-full snap-start items-center justify-center overflow-hidden">
+                  <img
+                    src="images/edit-admin-about-us.png"
+                    alt="Management Information System CV Kembar Jaya — Photo 3"
+                    class="max-h-full max-w-full object-contain"
+                  >
+                </div>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="carousel-prev absolute left-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="carousel-next absolute right-3 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-xl text-white backdrop-blur hover:bg-primary"
+              >
+                ›
+              </button>
+
+              <span
+                class="carousel-counter absolute bottom-3 right-3 z-30 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur"
+              >
+                1 / 4
+              </span>
+
+              <div
+                class="carousel-dots absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 gap-1.5 rounded-full bg-black/30 px-2 py-1.5 backdrop-blur"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-1 flex-col p-4">           
+
+            <h3 class="font-display text-[15px] font-bold">
+              Management Information System — CV Kembar Jaya
+            </h3>
+
+            <p class="mt-1 text-[11px] font-semibold text-primary">
+              Full Stack Developer · Klaten · Mar – Aug 2025
+            </p>
+
+            <p
+              class="mt-2 flex-1 text-[12.5px] leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+            >
+              Developed a
+              <b class="text-ink dark:text-white">
+                Management Information System
+              </b>
+              consisting of a user-facing website and admin panel
+              connected through a MySQL database. The system was designed
+              to support company information management and digital content
+              administration.
+            </p>
+
+            <div class="mt-3 flex flex-wrap gap-1">
+
+              <span class="tag-chip">HTML</span>
+              <span class="tag-chip">CSS</span>
+              <span class="tag-chip">PHP</span>
+              <span class="tag-chip">JavaScript</span>
+              <span class="tag-chip">MySQL</span>
+
+            </div>
+
+            <div class="mt-3">
+
+              <a
+                href="https://github.com/felianadiafikarda/cv-kembar-jaya"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex rounded-full border border-[#E6E9F1] px-4 py-2 text-xs font-semibold hover:border-primary hover:text-primary dark:border-white/10"
+              >
+                See Project ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       SKILLS
+  ========================================================== -->
+
+  <section id="skill" class="py-14 sm:py-[72px]">
+
+    <div class="mx-auto max-w-[1160px] px-5 sm:px-8">
+
+      <p
+        class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+      >
+        Capabilities
+      </p>
+
+      <h2
+        class="reveal font-display text-2xl font-extrabold sm:text-[30px]"
+      >
+        Skills & Tools
+      </h2>
+
+      <p
+        class="reveal mb-9 mt-2 max-w-2xl text-sm leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        Technical skills and tools I use for data analysis, web development,
+        database management, and collaborative development.
+      </p>
+
+
+      <div class="mx-auto grid max-w-[900px] gap-5 lg:grid-cols-2">
+
+
+        <!-- Hard Skills -->
+        <div
+          class="skill-panel reveal rounded-2xl border border-[#E6E9F1] bg-white p-6 shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+          <h3
+            class="mb-4 font-display text-xs font-bold uppercase tracking-wider text-primary"
+          >
+            Hard Skills
+          </h3>
+
+          <div class="flex flex-wrap gap-2">
+
+            <span class="pill">Data Cleaning</span>
+            <span class="pill">Data Preprocessing</span>
+            <span class="pill">Data Visualization</span>
+            <span class="pill">Database Management</span>
+
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">PostgreSQL</span>
+
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">Tailwind</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">PHP</span>
+            <span class="pill">Laravel</span>
+            <span class="pill">Next.js</span>
+            <span class="pill">ERD</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Soft Skills -->
+        <div
+          class="skill-panel reveal rounded-2xl border border-[#E6E9F1] bg-white p-6 shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+        >
+
+          <h3
+            class="mb-4 font-display text-xs font-bold uppercase tracking-wider text-primary"
+          >
+            Soft Skills
+          </h3>
+
+          <div class="flex flex-wrap gap-2">
+
+            <span class="pill">Analytical Thinking</span>
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Attention to Detail</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Teamwork</span>
+            <span class="pill">Time Management</span>
+            <span class="pill">Responsibility</span>
+            <span class="pill">Adaptability</span>
+            <span class="pill">Fast Learner</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Tools -->
+      <div
+        class="tools-panel reveal mt-[22px] rounded-2xl border border-[#E6E9F1] bg-white p-6 dark:border-white/10 dark:bg-[#171B2C]"
+      >
+
+        <h3
+          class="mb-4 font-display text-xs font-bold uppercase tracking-wider text-primary"
+        >
+          Tools I Use
+        </h3>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="pill">Microsoft Excel</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">Laragon</span>
+          <span class="pill">phpMyAdmin</span>
+          <span class="pill">pgAdmin</span>
+          <span class="pill">Git</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Visual Studio Code</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CONTACT
+  ========================================================== -->
+
+  <section
+    id="kontak"
+    class="bg-[#F2F4F9] py-14 sm:py-[72px] dark:bg-[#141827]"
+  >
+
+    <div class="mx-auto max-w-[1160px] px-5 sm:px-8">
+
+      <p
+        class="mb-3 font-display text-xs font-bold uppercase tracking-wider text-primary"
+      >
+        Let's Connect
+      </p>
+
+      <h2
+        class="reveal font-display text-2xl font-extrabold sm:text-[30px]"
+      >
+        Contact
+      </h2>
+
+      <p
+        class="reveal mb-9 mt-2 max-w-2xl text-sm leading-relaxed text-[#5B6178] dark:text-[#A2A8C0]"
+      >
+        Open to entry-level opportunities in Data Analysis and Web Development.
+      </p>
+
+
+      <div class="mx-auto flex max-w-[1000px] flex-wrap justify-center gap-5">
+
+
+        <!-- Email -->
+      <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=felianadiafikarda@gmail.com"
+      target="_blank"
+      rel="noopener"
+      class="contact-card reveal flex w-[280px] min-h-[170px] flex-col items-center justify-center rounded-2xl border border-[#E6E9F1] bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+      >
+
+      <div
+        class="mx-auto mb-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EBEEFD] text-primary dark:bg-primary/15"
+      >
+        ✉
+      </div>
+
+      <p class="text-[11px] uppercase text-[#9298AC]">
+        Email
+      </p>
+
+      <p class="mt-1 break-words text-[13px] font-semibold">
+        felianadiafikarda@gmail.com
+      </p>
+
+      </a>
+
+
+      <!-- LinkedIn -->
+      <a
+      href="https://www.linkedin.com/in/felia-nadia-fikarda"
+      target="_blank"
+      rel="noopener"
+      class="contact-card reveal flex w-[280px] min-h-[170px] flex-col items-center justify-center rounded-2xl border border-[#E6E9F1] bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+      >
+
+      <div
+        class="mx-auto mb-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EBEEFD] text-primary dark:bg-primary/15"
+      >
+        in
+      </div>
+
+      <p class="text-[11px] uppercase text-[#9298AC]">
+        LinkedIn
+      </p>
+
+      <p class="mt-1 text-[13px] font-semibold">
+        Felia Nadia Fikarda
+      </p>
+
+      </a>
+
+
+<!-- GitHub -->
+      <a
+      href="https://github.com/felianadiafikarda"
+      target="_blank"
+      rel="noopener"
+      class="contact-card reveal flex w-[280px] min-h-[170px] flex-col items-center justify-center rounded-2xl border border-[#E6E9F1] bg-white p-6 text-center transition hover:-translate-y-1 hover:border-primary hover:shadow-card dark:border-white/10 dark:bg-[#171B2C]"
+      >
+
+      <div
+        class="mx-auto mb-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EBEEFD] text-primary dark:bg-primary/15"
+      >
+        ⌥
+      </div>
+
+      <p class="text-[11px] uppercase text-[#9298AC]">
+        GitHub
+      </p>
+
+      <p class="mt-1 text-[13px] font-semibold">
+        felianadiafikarda
+      </p>
+
+      </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CTA
+  ========================================================== -->
+
+  <div
+    class="reveal mx-5 max-w-[1096px] overflow-hidden rounded-3xl bg-ink px-6 py-10 text-center text-[#FBFBFD] sm:mx-auto sm:px-11 sm:py-[52px] dark:bg-[#EEF0F8] dark:text-[#161A2B]"
+  >
+
+    <h2 class="font-display text-2xl font-extrabold">
+      Interested in Working Together?
+    </h2>
+
+    <p class="mx-auto mb-6 mt-3 max-w-2xl text-sm opacity-75">
+      I'm open to entry-level opportunities in Data Analysis,
+      Front-End Development, and Back-End Development.
+    </p>
+
+
+    <div class="flex justify-center gap-3">
+
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=felianadiafikarda@gmail.com"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white"
+      >
+        Send an Email
+      </a>
+
+      <a
+        href="https://wa.me/6285265416588"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex rounded-full border border-white/20 px-6 py-3 text-sm font-semibold dark:border-black/10"
+      >
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="mt-14 py-9">
+
+    <div
+      class="mx-auto flex max-w-[1160px] flex-col items-center justify-between gap-4 border-t border-[#E6E9F1] px-5 pt-6 sm:flex-row sm:px-8 dark:border-white/10"
+    >
+
+      <p class="font-display font-bold">
+        Felia Nadia Fikarda
+      </p>
+
+      <div class="flex gap-5 text-[13.5px]">
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=felianadiafikarda@gmail.com"
+        target="_blank"
+        rel="noopener">
+          Email
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/felia-nadia-fikarda"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/felianadiafikarda"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+      </div>
+
+      <p class="text-[13px] text-[#9298AC]">
+        © 2026
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       IMAGE LIGHTBOX
+  ========================================================== -->
+  <div
+    id="imageLightbox"
+    class="fixed inset-0 z-[9999] items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+    aria-hidden="true"
+  >
+    <button
+      id="lightboxClose"
+      type="button"
+      aria-label="Close image"
+      class="absolute right-5 top-5 z-[10000] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/40 text-2xl text-white backdrop-blur transition hover:bg-primary"
+    >
+      ×
+    </button>
+
+    <button
+      id="lightboxPrev"
+      type="button"
+      aria-label="Previous image"
+      class="absolute left-4 top-1/2 z-[10000] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-2xl text-white backdrop-blur transition hover:bg-primary sm:left-7"
+    >
+      ‹
+    </button>
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt=""
+      class="rounded-lg shadow-2xl"
+    >
+
+    <button
+      id="lightboxNext"
+      type="button"
+      aria-label="Next image"
+      class="absolute right-4 top-1/2 z-[10000] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-2xl text-white backdrop-blur transition hover:bg-primary sm:right-7"
+    >
+      ›
+    </button>
+
+    <span
+      id="lightboxCounter"
+      class="absolute bottom-5 left-1/2 z-[10000] -translate-x-1/2 rounded-full bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur"
+    >
+      1 / 1
+    </span>
+  </div>
+
+
+  <script>
+    const html = document.documentElement;
+
+    const themeToggle = document.getElementById('themeToggle');
+
+    const themeKnob = document.getElementById('themeKnob');
+
+
+    function setTheme(theme) {
+
+      html.classList.toggle(
+        'dark',
+        theme === 'dark'
+      );
+
+      themeKnob.textContent =
+        theme === 'dark'
+          ? '☀'
+          : '☾';
+
+      themeKnob.classList.toggle(
+        'translate-x-5',
+        theme === 'dark'
+      );
+
+      localStorage.setItem(
+        'felia-theme',
+        theme
+      );
+
+    }
+
+    const savedTheme =
+      localStorage.getItem('felia-theme');
+
+    const systemDark =
+      window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+
+
+    setTheme(
+      savedTheme ||
+      (systemDark ? 'dark' : 'light')
+    );
+
+
+    themeToggle.addEventListener(
+      'click',
+      () => {
+
+        setTheme(
+          html.classList.contains('dark')
+            ? 'light'
+            : 'dark'
+        );
+
+      }
+    );
+
+    const burger =
+      document.getElementById('burger');
+
+    const mobileMenu =
+      document.getElementById('mobileMenu');
+
+
+    burger.addEventListener(
+      'click',
+      () => {
+
+        mobileMenu.classList.toggle(
+          'hidden'
+        );
+
+      }
+    );
+
+
+    mobileMenu
+      .querySelectorAll('a')
+      .forEach(link => {
+
+        link.addEventListener(
+          'click',
+          () => {
+
+            mobileMenu.classList.add(
+              'hidden'
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================== */
+
+    const navLinks =
+      [...document.querySelectorAll('.nav-link')];
+
+
+    const sections =
+      navLinks
+        .map(link =>
+          document.querySelector(
+            link.getAttribute('href')
+          )
+        )
+        .filter(Boolean);
+
+
+    const navObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+
+            navLinks.forEach(link => {
+
+              link.classList.remove(
+                'text-ink',
+                'font-bold',
+                'dark:text-white'
+              );
+
+            });
+
+
+            const active =
+              navLinks.find(
+                link =>
+                  link.getAttribute('href') ===
+                  '#' + entry.target.id
+              );
+
+
+            if (active) {
+
+              active.classList.add(
+                'text-ink',
+                'font-bold',
+                'dark:text-white'
+              );
+
+            }
+
+          });
+
+        },
+        {
+          rootMargin:
+            '-45% 0px -50% 0px'
+        }
+      );
+
+
+    sections.forEach(
+      section =>
+        navObserver.observe(section)
+    );
+
+
+    /* =========================================================
+       EXPERIENCE FILTER
+    ========================================================== */
+
+    const filterButtons =
+      [...document.querySelectorAll('.filter-btn')];
+
+
+    const experienceCards =
+      [...document.querySelectorAll('.exp-card')];
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener(
+        'click',
+        () => {
+
+
+          /* Reset all buttons */
+
+          filterButtons.forEach(btn => {
+
+            btn.classList.remove(
+              'bg-primary',
+              'border-primary',
+              'text-white'
+            );
+
+
+            btn.classList.add(
+              'bg-white',
+              'border-[#E6E9F1]',
+              'text-[#5B6178]',
+              'dark:bg-[#171B2C]',
+              'dark:border-white/10',
+              'dark:text-[#A2A8C0]'
+            );
+
+          });
+
+
+          /* Activate selected button */
+
+          button.classList.remove(
+            'bg-white',
+            'border-[#E6E9F1]',
+            'text-[#5B6178]',
+            'dark:bg-[#171B2C]',
+            'dark:border-white/10',
+            'dark:text-[#A2A8C0]'
+          );
+
+
+          button.classList.add(
+            'bg-primary',
+            'border-primary',
+            'text-white'
+          );
+
+
+          /* Get filter */
+
+          const filter =
+            button.dataset.filter;
+
+
+          /* Show / hide cards */
+
+          experienceCards.forEach(card => {
+
+            const shouldHide =
+              filter !== 'all' &&
+              card.dataset.category !== filter;
+
+
+            card.classList.toggle(
+              'hidden',
+              shouldHide
+            );
+
+          });
+
+        }
+      );
+
+    });
+
+
+    /* =========================================================
+       CAROUSEL
+       
+       IMPORTANT:
+       - Landscape menggunakan object-contain
+       - Portrait menggunakan object-contain
+       - Setiap gambar memiliki wrapper
+       - Jumlah foto dihitung otomatis
+       - Counter otomatis
+       - Dots otomatis
+    ========================================================== */
+
+    document
+      .querySelectorAll('[data-carousel]')
+      .forEach(carousel => {
+
+
+        const track =
+          carousel.querySelector(
+            '.carousel-track'
+          );
+
+
+        const slides =
+          [...carousel.querySelectorAll(
+            '.carousel-slide'
+          )];
+
+
+        const prev =
+          carousel.querySelector(
+            '.carousel-prev'
+          );
+
+
+        const next =
+          carousel.querySelector(
+            '.carousel-next'
+          );
+
+
+        const dots =
+          carousel.querySelector(
+            '.carousel-dots'
+          );
+
+
+        const counter =
+          carousel.querySelector(
+            '.carousel-counter'
+          );
+
+
+        /* Total slide */
+
+        const totalSlides =
+          slides.length;
+
+
+        /* Update counter */
+
+        function updateCounter(index) {
+
+          counter.textContent =
+            `${index + 1} / ${totalSlides}`;
+
+        }
+
+
+        /* Create dots */
+
+        slides.forEach(
+          (slide, index) => {
+
+            const dot =
+              document.createElement(
+                'button'
+              );
+
+
+            dot.type = 'button';
+
+
+            dot.className =
+              'h-1.5 w-1.5 rounded-full bg-white/60 transition';
+
+
+            dot.setAttribute(
+              'aria-label',
+              `Go to photo ${index + 1}`
+            );
+
+
+            dot.addEventListener(
+              'click',
+              () => {
+
+                track.scrollTo({
+
+                  left:
+                    index *
+                    track.clientWidth,
+
+                  behavior:
+                    'smooth'
+
+                });
+
+              }
+            );
+
+
+            dots.appendChild(dot);
+
+          }
+        );
+
+
+        /* Update active dot */
+
+        function update() {
+
+          const width =
+            Math.max(
+              track.clientWidth,
+              1
+            );
+
+
+          const index =
+            Math.min(
+              totalSlides - 1,
+              Math.max(
+                0,
+                Math.round(
+                  track.scrollLeft /
+                  width
+                )
+              )
+            );
+
+
+          updateCounter(index);
+
+
+          [...dots.children]
+            .forEach(
+              (dot, i) => {
+
+                dot.classList.toggle(
+                  'bg-primary',
+                  i === index
+                );
+
+
+                dot.classList.toggle(
+                  'bg-white/60',
+                  i !== index
+                );
+
+
+                dot.classList.toggle(
+                  'scale-125',
+                  i === index
+                );
+
+              }
+            );
+
+        }
+
+
+        /* Previous */
+
+        prev.addEventListener(
+          'click',
+          () => {
+
+            track.scrollBy({
+
+              left:
+                -track.clientWidth,
+
+              behavior:
+                'smooth'
+
+            });
+
+          }
+        );
+
+
+        /* Next */
+
+        next.addEventListener(
+          'click',
+          () => {
+
+            track.scrollBy({
+
+              left:
+                track.clientWidth,
+
+              behavior:
+                'smooth'
+
+            });
+
+          }
+        );
+
+
+        /* Scroll */
+
+        track.addEventListener(
+          'scroll',
+          update,
+          {
+            passive: true
+          }
+        );
+
+
+        /* Resize */
+
+        window.addEventListener(
+          'resize',
+          update
+        );
+
+
+        /* Initial state */
+
+        update();
+
+      });
+
+
+
+    /* =========================================================
+       IMAGE LIGHTBOX
+    ========================================================== */
+
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+
+    let lightboxImages = [];
+    let currentLightboxIndex = 0;
+
+    function openLightbox(images, index) {
+      lightboxImages = images;
+      currentLightboxIndex = index;
+
+      updateLightboxImage();
+
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function updateLightboxImage() {
+      const image = lightboxImages[currentLightboxIndex];
+
+      if (!image) return;
+
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt || 'Portfolio image';
+
+      lightboxCounter.textContent =
+        `${currentLightboxIndex + 1} / ${lightboxImages.length}`;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.src = '';
+    }
+
+    function showPreviousImage() {
+      if (lightboxImages.length <= 1) return;
+
+      currentLightboxIndex =
+        (currentLightboxIndex - 1 + lightboxImages.length)
+        % lightboxImages.length;
+
+      updateLightboxImage();
+    }
+
+    function showNextImage() {
+      if (lightboxImages.length <= 1) return;
+
+      currentLightboxIndex =
+        (currentLightboxIndex + 1)
+        % lightboxImages.length;
+
+      updateLightboxImage();
+    }
+
+    /*
+     * Semua gambar di Experience dan Projects otomatis
+     * menjadi clickable untuk membuka lightbox.
+     */
+    document
+      .querySelectorAll(
+        '#pengalaman [data-carousel], #proyek [data-carousel]'
+      )
+      .forEach(carousel => {
+
+        const images = [
+          ...carousel.querySelectorAll('.carousel-slide img')
+        ];
+
+        images.forEach((image, index) => {
+          image.classList.add('zoomable-image');
+
+          image.addEventListener('click', event => {
+            event.stopPropagation();
+            openLightbox(images, index);
+          });
+        });
+
+      });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPreviousImage);
+    lightboxNext.addEventListener('click', showNextImage);
+
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (!lightbox.classList.contains('active')) return;
+
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+
+      if (event.key === 'ArrowLeft') {
+        showPreviousImage();
+      }
+
+      if (event.key === 'ArrowRight') {
+        showNextImage();
+      }
+    });
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        '.reveal'
+      );
+
+
+    revealElements.forEach(
+      el => {
+
+        el.classList.add(
+          'opacity-0',
+          'translate-y-4',
+          'transition-all',
+          'duration-500'
+        );
+
+      }
+    );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+
+            entry.target.classList.remove(
+              'opacity-0',
+              'translate-y-4'
+            );
+
+
+            entry.target.classList.add(
+              'opacity-100',
+              'translate-y-0'
+            );
+
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      el =>
+        revealObserver.observe(el)
+    );
+
+
+    /* =========================================================
+       TAILWIND CHIP CLASSES
+    ========================================================== */
+
+    document
+      .querySelectorAll('.tag-chip')
+      .forEach(el => {
+
+        el.className +=
+          ' rounded-full border border-[#E6E9F1] bg-[#F2F4F9] px-2.5 py-1.5 text-[11.5px] font-semibold text-[#5B6178] dark:border-white/10 dark:bg-[#141827] dark:text-[#A2A8C0]';
+
+      });
+
+
+    document
+      .querySelectorAll('.pill')
+      .forEach(el => {
+
+        el.className +=
+          ' rounded-full border border-[#E6E9F1] bg-[#F2F4F9] px-3.5 py-2 text-xs font-semibold dark:border-white/10 dark:bg-[#141827]';
+
+      });
+
+  </script>
+
+</body>
+</html>
