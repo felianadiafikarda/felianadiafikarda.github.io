@@ -101,11 +101,11 @@ Saya senang mengubah data mentah menjadi wawasan yang bermakna (*meaningful insi
 Saya terbuka untuk **entry-level opportunities** di bidang **Data Analysis**, **Front-End Development**, dan **Back-End Development**. Silakan hubungi saya melalui:
 
 *   **Email:** felianadiafikarda@gmail.com
-*   **LinkedIn:** [Felia Nadia Fikarda](https://linkedin.com/in/felianadiafikarda)
+*   **LinkedIn:** [Felia Nadia Fikarda](https://www.linkedin.com/in/felia-nadia-fikarda)
 *   **GitHub:** [felianadiafikarda](https://github.com/felianadiafikarda)
 
 ---
 
 <div align="center">
-  <p>© 2026 Felia Nadia Fikarda. Dibuat dengan penuh semangat.</p>
+  <p>© 2026 Felia Nadia Fikarda</p>
 </div>
