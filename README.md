@@ -7,7 +7,7 @@
 
   <p>
     <a href="mailto:felianadiafikarda@gmail.com">📧 Email</a> •
-    <a href="https://linkedin.com/in/felianadiafikarda">💼 LinkedIn</a> •
+    <a href="https://www.linkedin.com/in/felia-nadia-fikarda">💼 LinkedIn</a> •
     <a href="https://github.com/felianadiafikarda">🐙 GitHub</a>
   </p>
 
