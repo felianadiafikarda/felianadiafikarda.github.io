@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --day-primary: #0369A1;
+    --day-primary-dark: #075985;
+    --day-ink: #172033;
+    --day-text: #334155;
+    --day-muted: #475569;
+    --day-border: #CBD5E1;
+    --day-soft: #F1F5F9;
+    --day-card: #F8FAFC;
+  }
+
+  html:not(.dark) body {
+    color: var(--day-ink);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 9999px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.6);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(3, 105, 161, 0.7);
+  }
+}
+
+@layer utilities {
+  .zoomable-image {
+    cursor: zoom-in;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .zoomable-image:hover {
+    opacity: 0.92;
+  }
+
+  /* Filter buttons active / inactive overrides */
+  .filter-active {
+    background-color: #0369A1 !important;
+    border-color: #0369A1 !important;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+  }
+
+  /* Tag chips */
+  .tag-chip {
+    @apply inline-flex items-center rounded-md border border-[#E6E9F1] bg-[#F2F4F9] px-2.5 py-1 text-[11px] font-semibold text-[#475569] transition duration-200 dark:border-white/10 dark:bg-white/5 dark:text-[#A2A8C0];
+  }
+
+  /* General pills */
+  .pill {
+    @apply inline-flex items-center rounded-full border border-[#CBD5E1] bg-[#F1F5F9] px-3.5 py-1.5 text-xs font-semibold text-[#334155] shadow-sm transition hover:border-[#0369A1] hover:text-[#0369A1] dark:border-white/10 dark:bg-[#102A3D] dark:text-[#E2E8F0] dark:hover:border-[#7DD3FC] dark:hover:text-[#7DD3FC];
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+}
+
+/* Custom terminal font */
+.font-mono-code {
+  font-family: 'Fira Code', monospace;
+}
