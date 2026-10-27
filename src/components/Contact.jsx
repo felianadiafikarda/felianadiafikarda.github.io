@@ -175,13 +175,13 @@ export default function Contact() {
                 Available to discuss entry-level roles, data analyst positions, or software engineering opportunities.
               </p>
               <div className="mt-7 flex flex-wrap justify-center items-center gap-3">
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 hover:bg-sky-400 hover:scale-105 active:scale-95 transition-all"
+                {/* <a
+                  href="mailto:felianadiafikarda@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 hover:bg-sky-400 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                 >
                   <Send className="h-4 w-4" />
                   Send Email Now
-                </a>
+                </a> */}
                 <a
                   href={personalInfo.whatsapp}
                   target="_blank"
@@ -201,10 +201,10 @@ export default function Contact() {
       {/* ── Footer ── */}
       <footer className="border-t border-slate-200/60 bg-white/80 dark:border-white/5 dark:bg-[#050810]/90 backdrop-blur-xl py-12 transition-colors duration-300">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-100 dark:border-white/5 items-start">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-10 border-b border-slate-100 dark:border-white/5">
 
-            {/* Brand */}
-            <div className="md:col-span-5 space-y-3">
+            {/* Brand / Bio */}
+            <div className="max-w-md space-y-3.5">
               <div className="flex items-center gap-2.5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 shadow-lg">
                   <span className="text-white text-sm font-black">F</span>
@@ -212,7 +212,7 @@ export default function Contact() {
                 <h4 className="font-display text-lg font-bold text-slate-900 dark:text-white">{personalInfo.name}</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
-                Bachelor of Informatics graduate from Universitas Ahmad Dahlan, Yogyakarta. Specializing in Data Analysis (Python, SQL), NLP Machine Learning, and Full-Stack Web Development.
+                Bachelor of Informatics graduate from Universitas Ahmad Dahlan, Yogyakarta. Specializing in Web and Software Development, Data Analysis & QA.
               </p>
               <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
                 <MapPin className="h-3.5 w-3.5 text-sky-500" />
@@ -241,9 +241,9 @@ export default function Contact() {
             </div>
 
             {/* Navigation */}
-            <div className="md:col-span-4 space-y-3">
+            <div className="space-y-3 min-w-[260px] sm:min-w-[300px]">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Navigation</div>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-medium text-slate-600 dark:text-slate-400 list-none">
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs font-medium text-slate-600 dark:text-slate-400 list-none">
                 {[
                   { href: '#home', label: 'Home' },
                   { href: '#profil', label: 'About' },
@@ -259,30 +259,6 @@ export default function Contact() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Availability */}
-            <div className="md:col-span-3 space-y-3">
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Status</div>
-              <div className="rounded-2xl border border-emerald-200/80 bg-emerald-50/60 p-4 dark:border-emerald-500/20 dark:bg-emerald-950/30">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                  </span>
-                  <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300">Available for Hire</span>
-                </div>
-                <p className="text-[11px] text-emerald-800 dark:text-emerald-400 leading-relaxed">
-                  Open to entry-level opportunities as a data analyst or software engineer.
-                </p>
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="mt-3 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 hover:underline"
-                >
-                  Contact Now
-                  <Send className="h-3 w-3" />
-                </a>
-              </div>
             </div>
 
           </div>

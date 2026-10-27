@@ -97,7 +97,7 @@ export default function App() {
 
       <main className="relative">
         <DynamicBackground />
-        <Hero />
+        <Hero isIntroDone={!isIntroActive} />
         <About />
         <Experience onOpenLightbox={handleOpenLightbox} />
         <Projects onOpenLightbox={handleOpenLightbox} />

@@ -177,9 +177,6 @@ export default function SpotlightIntro({ onComplete }) {
             {personalInfo.name || 'FELIA NADIA FIKARDA'}
           </h1>
 
-          <p className="text-sm sm:text-lg md:text-xl text-slate-600 max-w-xl font-medium mb-6">
-            Data Analyst · Front-End · Back-End
-          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="px-3 py-1 rounded-full border border-slate-800 bg-slate-900/50 text-xs text-slate-600">
@@ -218,11 +215,6 @@ export default function SpotlightIntro({ onComplete }) {
               {personalInfo.name || 'FELIA NADIA FIKARDA'}
             </span>
           </h1>
-
-          {/* Luminous Subtitle */}
-          <p className="text-sm sm:text-lg md:text-xl text-sky-200/90 max-w-xl font-medium mb-6 drop-shadow-[0_0_15px_rgba(56,189,248,0.4)]">
-            Data Analyst · Front-End · Back-End
-          </p>
 
           {/* Quick Highlight Chips with Neon Radiance */}
           <div className="flex flex-wrap items-center justify-center gap-3">

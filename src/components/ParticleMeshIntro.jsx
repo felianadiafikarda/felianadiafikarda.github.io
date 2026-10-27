@@ -228,14 +228,14 @@ export default function ParticleMeshIntro({ onComplete }) {
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-sm sm:text-base font-semibold text-[#7DD3FC] tracking-wide uppercase mb-6"
           >
             Data Analyst · Web Developer
-          </motion.p>
+          </motion.p> */}
 
           {/* Counter Display & Progress Line */}
           <motion.div

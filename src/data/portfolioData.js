@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Felia Nadia Fikarda",
-  title: "Data Analyst · Front-End Developer · Back-End Developer",
+  // title: "Data Analyst · Front-End Developer · Back-End Developer",
   badge: "Open to entry-level opportunities",
   bio: "Informatics graduate from Universitas Ahmad Dahlan with hands-on experience in Python, SQL, MySQL, Excel, data cleaning, preprocessing, data visualization, and database management. I am passionate about turning data into meaningful insights while also building responsive and functional web applications using modern web technologies.",
   location: "Yogyakarta, ID",
@@ -28,7 +28,7 @@ export const profileCards = [
   {
     id: "focus",
     title: "Focus",
-    description: "Data Analysis, Front-End and\nBack-End Development",
+    description: "Web and Software Development,\n Data Analysis, and QA",
     icon: "Target"
   },
   {
@@ -168,6 +168,20 @@ export const projects = [
 
 export const trainingCertifications = [
   {
+    id: "cert-3",
+    title: "Python Developer",
+    issuer: "freeCodeCamp",
+    category: "certification",
+    period: "October 25, 2026",
+    year: "2026",
+    verificationLink: "https://freecodecamp.org/certification/felia-nadia-fikarda/python-v9",
+    description: "Earned the official Python Developer Certification from freeCodeCamp, representing approximately 300 hours of coursework, algorithmic challenges, and hands-on projects. Gained proficiency in core Python programming, data structures, algorithms, object-oriented design, functional programming paradigms, and systematic software problem solving.",
+    tags: ["Python", "Algorithms", "Data Structures", "OOP", "Software Development", "Problem Solving"],
+    images: [
+      { src: "/images/pyhton-certificate.png", alt: "Python Developer Certification - freeCodeCamp" }
+    ]
+  },
+  {
     id: "cert-1",
     title: "Data Analytics Essentials",
     issuer: "Cisco Networking Academy",
@@ -218,14 +232,14 @@ export const trainingCertifications = [
     images: [
       { src: "/images/introduction to data science swith python.jpg", alt: "Introduction to Data Science with Python" }
     ]
-  }
+  },
 ];
 
 export const skills = {
   hardSkills: [
+    "Laravel",  "PHP", "HTML", "CSS", "Tailwind", "JavaScript",  "Next.js", "React.Js","Python", 
     "Data Cleaning", "Data Preprocessing", "Data Visualization", "Database Management",
-    "Python", "SQL", "MySQL", "PostgreSQL",
-    "HTML", "CSS", "Tailwind", "JavaScript", "PHP", "Laravel", "Next.js", "ERD"
+    "Python", "SQL", "MySQL", "PostgreSQL", "ERD" 
   ],
   softSkills: [
     "Analytical Thinking", "Problem Solving", "Attention to Detail", "Communication",

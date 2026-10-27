@@ -277,7 +277,7 @@ export default function FluidLiquidIntro({ onComplete }) {
 
           {/* Subtitle Roles */}
           <p className="text-sm sm:text-base text-slate-300 font-medium mb-6">
-            Data Analyst & Web Developer
+            Web and Software Developer, Data Analys & QA
           </p>
 
           {/* Quick Highlight Chips */}

@@ -60,16 +60,14 @@ export default function About() {
                 <p>
                   I am an{' '}
                   <b className="text-sky-600 dark:text-sky-400">Informatics graduate from Universitas Ahmad Dahlan</b>{' '}
-                  with deep focus in data analysis and software engineering. My hands-on experience covers{' '}
-                  <b className="text-slate-800 dark:text-slate-200">Python, SQL, MySQL, Excel, data cleaning, preprocessing, and data visualization</b>{' '}
-                  gained through academic research, internships, and laboratory practicum guidance.
+                  with a strong focus in <b className="text-slate-800 dark:text-slate-200">web & software development</b>. I build responsive user interfaces and robust backend systems using{' '}
+                  <b className="text-sky-600 dark:text-sky-400">Laravel, PHP, React.js, Tailwind CSS, and JavaScript</b>.
                 </p>
                 <p>
-                  On the software development side,{' '}
-                  <b className="text-slate-800 dark:text-slate-200">I build responsive user interfaces and robust backend systems</b>{' '}
-                  using{' '}
-                  <b className="text-sky-600 dark:text-sky-400">Laravel, PHP, React.js, Tailwind CSS, and JavaScript</b>.
-                  I enjoy transforming raw data into actionable insights and designing practical, high-impact digital solutions.
+                  Alongside development, I specialize in{' '}
+                  <b className="text-slate-800 dark:text-slate-200">data analysis & QA</b>. My hands-on experience covers{' '}
+                  <b className="text-sky-600 dark:text-sky-400">Python, SQL, MySQL, Excel, data cleaning, preprocessing, and data visualization</b>{' '}
+                  gained through academic research, internships, and laboratory practicum guidance to transform raw data into actionable insights.
                 </p>
               </div>
             </div>

@@ -195,7 +195,7 @@ export default function IsometricDeckIntro({ onComplete, isDark: isDarkProp }) {
                       isDark ? 'text-sky-300' : 'text-sky-600'
                     }`}
                   >
-                    Data Analyst & Web Developer
+                    Web and Software Developer, Data Analyst & QA
                   </p>
                 </div>
               </div>
