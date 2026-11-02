@@ -106,6 +106,7 @@ export default function IdCardBadge({ isIntroDone = false }) {
   return (
     <div
       ref={containerRef}
+      id="hero-id-card"
       className="relative w-full max-w-[270px] sm:max-w-[290px] mx-auto pt-6 md:pt-16 pb-2 overflow-visible"
     >
       {/* ─── ENTIRE ID CARD ASSEMBLY (Lanyard + Metallic Clamp + Glass Plastic Casing + Card) ─── */}

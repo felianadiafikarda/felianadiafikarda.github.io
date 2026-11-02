@@ -11,7 +11,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/felia-nadia-fikarda",
   github: "https://github.com/felianadiafikarda",
   whatsapp: "https://wa.me/6285265416588",
-  cvPath: "/CV_Felia_Nadia_Fikarda_IT_Focused",
+  cvPath: "/CV_Felia_Nadia_Fikarda_IT_Focused.pdf",
   profileImg: "/profile.JPEG",
   uadImg: "/images/uad.jpg",
   aboutText1: "I'm an Informatics graduate from Universitas Ahmad Dahlan with an interest in data analysis and web development. I have hands-on experience working with Python, SQL, MySQL, Excel, data cleaning, preprocessing, visualization, and database management through academic projects, internships, and practical experiences.",
@@ -140,7 +140,7 @@ export const projects = [
     title: "Village Information Management System — Karangtengah",
     role: "Backend Developer · Karangtengah Village · KKN",
     description: "Developed a web-based village information management system during the KKN community service program. The system supports village staff in managing information and administrative data through a centralized digital platform.",
-    tags: ["Next.js", "PostgreSQL", "CSS"],
+    tags: ["React.js","Next.js", "PostgreSQL", "CSS"],
     link: "https://karangtengah-rho.vercel.app/user",
     images: [
       { src: "/images/profile-page.png", alt: "Profile Karangtengah" },

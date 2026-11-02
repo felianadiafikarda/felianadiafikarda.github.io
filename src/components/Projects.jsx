@@ -89,6 +89,7 @@ export default function Projects({ onOpenLightbox }) {
             return (
               <motion.article
                 key={proj.id}
+                id={idx === 0 ? "featured-project-card" : undefined}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
