@@ -182,8 +182,12 @@ export const projects = [
     link: "https://bookingphotostudio.netlify.app/",
     images: [
       { src: "/images/booking-studio.png", alt: "Online Photo Studio Booking — Landing Page" },
-      { src: "/images/booking-studio-packages.png", alt: "Online Photo Studio Booking — Studio Packages" },
-      { src: "/images/booking-studio-booking.png", alt: "Online Photo Studio Booking — Reservation & Schedule" }
+      { src: "/images/booking-studio-paket.png", alt: "Online Photo Studio Booking — Studio Packages" },
+      { src: "/images/booking-studio-pemesanan.png", alt: "Online Photo Studio Booking — Reservation & Schedule" },
+      { src: "/images/booking-studio-dahsboard admin.png", alt: "Online Photo Studio Booking — Dashboard" },
+      { src: "/images/booking-studio-kalender.png", alt: "Online Photo Studio Booking — Calendar" },
+      { src: "/images/booking-studio-katalog.png", alt: "Online Photo Studio Booking — Catalog" },
+      { src: "/images/booking-studio-ringkasan.png", alt: "Online Photo Studio Booking — Summary" }
     ]
   }
 ];
