@@ -42,7 +42,7 @@ const colorMap = {
 const statCards = [
   { value: personalInfo.gpa, label: 'GPA', sub: '/ 4.00 · Honors', icon: GraduationCap, accent: 'from-emerald-500 to-teal-500' },
   { value: '100+', label: 'Students', sub: 'UAD Practicums', icon: TrendingUp, accent: 'from-sky-500 to-indigo-500' },
-  { value: '3+', label: 'Projects', sub: 'Deployed & Live', icon: Code2, accent: 'from-violet-500 to-purple-500' },
+  { value: '4+', label: 'Projects', sub: 'Deployed & Live', icon: Code2, accent: 'from-violet-500 to-purple-500' },
   { value: '5', label: 'Certs', sub: 'Training & Badges', icon: Database, accent: 'from-amber-500 to-orange-500' },
 ];
 

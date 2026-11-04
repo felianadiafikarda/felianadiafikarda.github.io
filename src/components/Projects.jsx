@@ -267,6 +267,27 @@ export default function Projects({ onOpenLightbox }) {
                     </ul>
                   </div>
                 )}
+
+                {selectedProject.id === 'proj-4' && (
+                  <div className="mt-4 rounded-2xl bg-slate-50 p-4 border border-slate-200/80 dark:bg-white/5 dark:border-white/5">
+                    <h5 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+                      Key Features & Capabilities:
+                    </h5>
+                    <ul className="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+                      {[
+                        'Interactive studio package selection, real-time slot scheduling, and customizable add-ons.',
+                        'Role-Based Access Control (RBAC) supporting Customer, Admin, and Owner roles.',
+                        'Comprehensive Admin Dashboard for appointment scheduling, package management, and payment validation.',
+                        'Conflict-free booking architecture to prevent double bookings and optimize studio operations.',
+                      ].map((point) => (
+                        <li key={point} className="flex items-start gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-emerald-500" />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               {/* Technologies / Tags */}

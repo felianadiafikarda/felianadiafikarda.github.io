@@ -163,6 +163,28 @@ export const projects = [
       { src: "/images/pemesanan-cv-kembar-jaya.png", alt: "CV Kembar Jaya Reservation" },
       { src: "/images/edit-admin-about-us.png", alt: "CV Kembar Jaya Admin" }
     ]
+  },
+  {
+    id: "proj-4",
+    title: "Online Photo Studio Booking Web Application",
+    role: "Fullstack Developer",
+    description: "Developed a full-stack web application for an online photo studio booking system. The platform enables customers to seamlessly select photography packages, real-time time slots, and add-ons. It features a comprehensive admin dashboard for scheduling, package management, and payment validation, alongside Role-Based Access Control (RBAC) for Customers, Admins, and Owners to prevent double bookings and streamline operations.",
+    tags: [
+      "Next.js (App Router)",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "JWT & bcryptjs",
+      "Zod"
+    ],
+    link: "https://bookingphotostudio.netlify.app/",
+    images: [
+      { src: "/images/booking-studio.png", alt: "Online Photo Studio Booking — Landing Page" },
+      { src: "/images/booking-studio-packages.png", alt: "Online Photo Studio Booking — Studio Packages" },
+      { src: "/images/booking-studio-booking.png", alt: "Online Photo Studio Booking — Reservation & Schedule" }
+    ]
   }
 ];
 
