@@ -62,7 +62,7 @@ export default function Experience({ onOpenLightbox }) {
               Career Track
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-              Work & Teaching Experience
+              Work Experience
             </h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 max-w-xl">
               Proven experience in backend development, relational database engineering, and academic lab guidance for 100+ students.
